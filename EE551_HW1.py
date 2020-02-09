@@ -87,17 +87,18 @@ def dictionaries():
     #   name => {first_name => "Grace", last_name => "Hopper"} (a dictionary)
     #   jobs => ["scientist", "engineer"] (a list)
     #   age => 85
-    a = {"name":{"first name":"Grace", "last name":"Hopper"}, "jobs":["scientisit", "engineer"], "Age": 85}
+    amazing_grace = {"name":{"first name":"Grace", "last name":"Hopper"}, "jobs":["scientisit", "engineer"], "Age": 85}
     
     # Add "programmer" to the list of jobs Grace has
     # IMPLEMENT IT HERE
-    a["jobs"].append("programmer")
+    amazing_grace["jobs"].append("programmer")
     
     # Get the third job Grace has that you recently added
-    a["jobs"][2]
+    amazing_grace["jobs"][2]
     
     # Use the sort() function to get sorted keys of amazing_grace in alphabetically ascending order
-
+    amzing_grace["jobs"].sort
+    
     return a, f, p, k
 
 numbers_and_strings()
