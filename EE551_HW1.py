@@ -30,7 +30,7 @@ def numbers_and_strings():
     # Replace "good" with "awesome" in variable m and assign it to a new variable n
     m = "awesome"
     n = y + " is good"
-    n.replace('good', n)
+    n.replace('good', m)
     
     return x, y, z, length, m, n
 
@@ -54,10 +54,22 @@ def lists():
     A = [[1, 4, 5], [6, 10, 11], [12, 17, 38]]
     
     # Collect the items in the last column of matrix A using list comprehension
+    Last_Col = []
     for row in range(3):
-        print(A[row][2])
+        if A[row]:
+            Last_Col.append(A[row][2])
         
     # Collect only the even items of the diagonal of matrix A using list comprehension
+    Diag = []
+    for x in range(3):
+        Diag.append(A[x][x])
+    for x in range(2, -1, -1):
+        Diag.append(A[2 - x][x])
+    Even_Item = []
+    l = len(Diag)
+    for y in range(l):
+        if Diag[y] % 2 == 0:
+            Even_Item.append(Diag[y])
     
     # We can convert a single character to its underlying integer code (e.g., its ASCII byte value)
     # by passing it to the built-in ord function. Generate a list of these integers to represent
