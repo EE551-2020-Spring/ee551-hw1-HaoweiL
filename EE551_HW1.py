@@ -21,7 +21,7 @@ def numbers_and_strings():
     
     # What is the length of z?
     z = ""
-    len(z)
+    length = len(z)
     0
     
     # Concatenate variable y with string " is good"
@@ -42,10 +42,10 @@ def lists():
     n = "Stevens is awesome"
 
     # Split variable n on a delimiter space into a list of substrings
-    substrings = n.split()
+    p = n.split()
     
     # Get all the items past the first of the third substring
-    substring[1:]
+    r = p[1:]
     
     # Create a 3 x 3 matrix as nested list such that
     #   first row is [1, 4, 5]
@@ -54,10 +54,10 @@ def lists():
     A = [[1, 4, 5], [6, 10, 11], [12, 17, 38]]
     
     # Collect the items in the last column of matrix A using list comprehension
-    Last_Col = []
+    c = []
     for row in range(3):
         if A[row]:
-            Last_Col.append(A[row][2])
+            c.append(A[row][2])
         
     # Collect only the even items of the diagonal of matrix A using list comprehension
     Diag = []
@@ -65,16 +65,17 @@ def lists():
         Diag.append(A[x][x])
     for x in range(2, -1, -1):
         Diag.append(A[2 - x][x])
-    Even_Item = []
+    d = []
     l = len(Diag)
     for y in range(l):
         if Diag[y] % 2 == 0:
-            Even_Item.append(Diag[y])
+            d.append(Diag[y])
     
     # We can convert a single character to its underlying integer code (e.g., its ASCII byte value)
     # by passing it to the built-in ord function. Generate a list of these integers to represent
     # each character of the string "Stevens" using list comprehension.
-
+    o = [ord(z) for z in 'Stevens']
+    
     return p, r, c, d, o
 
 
@@ -99,17 +100,17 @@ def dictionaries():
     #   name => {first_name => "Grace", last_name => "Hopper"} (a dictionary)
     #   jobs => ["scientist", "engineer"] (a list)
     #   age => 85
-    amazing_grace = {"name":{"first name":"Grace", "last name":"Hopper"}, "jobs":["scientisit", "engineer"], "Age": 85}
+    a = {"name":{"first name":"Grace", "last name":"Hopper"}, "jobs":["scientisit", "engineer"], "Age": 85}
     
     # Add "programmer" to the list of jobs Grace has
     # IMPLEMENT IT HERE
-    amazing_grace["jobs"].append("programmer")
+    a["jobs"].append("programmer")
     
     # Get the third job Grace has that you recently added
-    amazing_grace["jobs"][2]
+    p = a["jobs"][2]
     
     # Use the sort() function to get sorted keys of amazing_grace in alphabetically ascending order
-    amzing_grace["jobs"].sort
+    k = a["jobs"].sort
     
     return a, f, p, k
 
